@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import { connection } from '../database/connection'
 
-export const OngController = {
+const OngController = {
   async index(req, res) {
     const ongs = await connection('ongs').select('*')
 
@@ -25,3 +25,5 @@ export const OngController = {
     return res.json({ id })
   }
 }
+
+export default OngController
